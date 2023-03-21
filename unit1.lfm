@@ -1,0 +1,95 @@
+object DumpForm: TDumpForm
+  Left = 31
+  Height = 416
+  Top = 121
+  Width = 574
+  Caption = 'Dump printer memory'
+  ClientHeight = 416
+  ClientWidth = 574
+  LCLVersion = '2.2.6.0'
+  object Memo1: TMemo
+    Left = 0
+    Height = 356
+    Top = 56
+    Width = 574
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Font.Name = 'Courier New'
+    ParentFont = False
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+    WordWrap = False
+  end
+  object btnDump: TButton
+    Left = 184
+    Height = 25
+    Top = 24
+    Width = 80
+    Caption = 'Dump'
+    OnClick = btnDumpClick
+    TabOrder = 1
+  end
+  object DumpAddress: TEdit
+    Left = 8
+    Height = 29
+    Top = 24
+    Width = 80
+    TabOrder = 2
+    Text = '$0'
+  end
+  object DumpLen: TEdit
+    Left = 96
+    Height = 29
+    Top = 24
+    Width = 80
+    TabOrder = 3
+    Text = '1200'
+  end
+  object btnDumpRam: TButton
+    Left = 336
+    Height = 25
+    Top = 24
+    Width = 75
+    Caption = 'Dump ram'
+    OnClick = btnDumpRamClick
+    TabOrder = 4
+  end
+  object btnDumpSpi: TButton
+    Left = 416
+    Height = 25
+    Top = 24
+    Width = 75
+    Caption = 'Dump spi'
+    OnClick = btnDumpSpiClick
+    TabOrder = 5
+  end
+  object btnDumpOtp: TButton
+    Left = 496
+    Height = 25
+    Top = 24
+    Width = 75
+    Caption = 'Dump otp'
+    OnClick = btnDumpOtpClick
+    TabOrder = 6
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 15
+    Top = 9
+    Width = 48
+    Caption = 'Address'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 96
+    Height = 15
+    Top = 8
+    Width = 39
+    Caption = 'Length'
+    ParentColor = False
+  end
+  object SaveDialog1: TSaveDialog
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 296
+    Top = 48
+  end
+end
